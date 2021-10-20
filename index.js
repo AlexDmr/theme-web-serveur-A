@@ -1,4 +1,4 @@
-console.log(`Hello Node.js v${process.versions.node}!`);
+console.log(`Serveur A exécuté sur NodeJS v${process.versions.node}!`);
 
 const https = require('https');
 const fs = require("fs");
