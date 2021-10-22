@@ -9,7 +9,7 @@ const app = express()
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('default'))
 app.use('/noCORS', express.static('static'))
-app.use('/withCORS', cors(), express.static('static'))
+app.use('/withCORS', cors({origin: 'https://localhost:8444'}), express.static('static'))
 
 
 app.listen(8080, () => console.log("A : Le serveur HTTP écoute sur le port 8080") );
