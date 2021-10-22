@@ -7,6 +7,7 @@ const express = require('express');
 const app = express()
 
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static('default'))
 app.use('/noCORS', express.static('static'))
 app.use('/withCORS', cors(), express.static('static'))
 
